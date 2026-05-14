@@ -1,0 +1,34 @@
+﻿### Get all PCs
+GET http://localhost:5277/api/pcs
+Accept: application/json
+
+### Get PC ID: 1
+GET http://localhost:5277/api/pcs/1/components
+Accept: application/json
+
+### Add a new PC
+POST http://localhost:5277/api/pcs
+Content-Type: application/json
+
+{
+  "name": "Budget Gamer V1",
+  "weight": 9.5,
+  "warranty": 24,
+  "createdAt": "2026-05-14T10:00:00",
+  "stock": 15
+}
+
+### Update an existing PC 
+PUT http://localhost:5277/api/pcs/4
+Content-Type: application/json
+
+{
+  "name": "Budget Gamer V1 - Upgraded",
+  "weight": 10.0,
+  "warranty": 36,
+  "createdAt": "2026-05-14T10:00:00",
+  "stock": 10
+}
+
+### Delete a PC
+DELETE http://localhost:5277/api/pcs/4  
